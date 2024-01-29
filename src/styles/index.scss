@@ -1,11 +1,18 @@
+@import "normalize";
 @import "variables/global";
+@import "themes/light";
+@import "themes/dark";
 
-body {
-  color: #000;
+.app {
+  display: flex;
+  flex-direction: column;
+  align-items: self-start;
+  min-height: 100vh;
+  color: var(--primary-color);
   font: var(--font-m);
   font-weight: 400;
   font-style: normal;
-  background-color: #f4f4f4;
+  background-color: var(--bg-color);
 }
 
 *, *:after, *:before {

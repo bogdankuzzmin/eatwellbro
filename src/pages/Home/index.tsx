@@ -1,8 +1,17 @@
+import useTheme from '@hooks/useTheme';
+import '@styles/index.scss';
+
 const HomePage = () => {
+  const {theme, toggleTheme} = useTheme();
+
   return (
-    <h2>
-      Home page
-    </h2>
+    <div className={`app ${theme}`}>
+      <h2>
+        Home page
+      </h2>
+
+      <button onClick={toggleTheme}>Change theme</button>
+    </div>
   );
 };
 
