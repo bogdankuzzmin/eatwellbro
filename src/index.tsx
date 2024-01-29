@@ -1,6 +1,13 @@
 import { createRoot } from 'react-dom/client';
-import App from './App';
-import './theme/global.scss';
+import { BrowserRouter } from 'react-router-dom';
+
+import MainPage from '@pages/Main';
+import '@theme/global.scss';
 
 const root = createRoot(document.getElementById('root'));
-root.render(<App />);
+
+root.render(
+  <BrowserRouter>
+    <MainPage />
+  </BrowserRouter>
+);
