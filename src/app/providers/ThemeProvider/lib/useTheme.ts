@@ -1,8 +1,9 @@
 import { useContext } from 'react';
 
-import { ThemeContext } from '@contexts/theme/ThemeContext';
 import { LocalStorage } from '@utils/constants/localStorage';
-import { ETheme } from '@contexts/theme/types';
+
+import { ThemeContext } from './ThemeContext';
+import { ETheme } from '../types';
 
 interface IUseThemeResult {
   theme: ETheme;
