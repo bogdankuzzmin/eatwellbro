@@ -1,6 +1,6 @@
 import { AppRouter } from '@app/providers/router';
 import { useTheme } from '@app/providers/ThemeProvider';
-import classNames from '@helpers/lib/classNames';
+import classNames from '@shared/lib/classNames';
 
 import '@app/styles/index.scss';
 

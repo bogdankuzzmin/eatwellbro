@@ -1,6 +1,6 @@
 import { ReactNode, useMemo, useState } from 'react';
 
-import { LocalStorage } from '@helpers/config/localStorage';
+import { LocalStorage } from '@shared//config/localStorage';
 
 import { ThemeContext } from '../lib/ThemeContext';
 import { ETheme } from '../types';

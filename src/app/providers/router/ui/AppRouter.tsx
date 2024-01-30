@@ -1,7 +1,7 @@
 import { lazy, Suspense } from 'react';
 import { Route, Routes } from 'react-router-dom';
 
-import { Paths } from '@helpers/config/routes';
+import { Paths } from '@shared/config/routes';
 
 const MainPage = lazy(() => import('@pages/MainPage/ui/MainPage'));
 const NotFoundPage = lazy(() => import('@pages/NotFoundPage/ui/NotFoundPage'));

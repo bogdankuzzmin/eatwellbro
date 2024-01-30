@@ -1,6 +1,6 @@
 import { useContext } from 'react';
 
-import { LocalStorage } from '@helpers/config/localStorage';
+import { LocalStorage } from '@shared/config/localStorage';
 
 import { ThemeContext } from './ThemeContext';
 import { ETheme } from '../types';
