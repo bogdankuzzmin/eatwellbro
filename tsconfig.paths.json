@@ -2,11 +2,13 @@
   "compilerOptions": {
     "baseUrl": "src",
     "paths": {
-      "@contexts/*": ["contexts/*"],
-      "@hooks/*": ["hooks/*"],
+      "@app/*": ["app/*"],
+      "@entities/*": ["entities/*"],
+      "@features/*": ["features/*"],
+      "@helpers/*": ["helpers/*"],
       "@pages/*": ["pages/*"],
-      "@styles/*": ["styles/*"],
-      "@utils/*": ["utils/*"],
+      "@shared/*": ["shared/*"],
+      "@widgets/*": ["widgets/*"],
     }
   }
 }
