@@ -1,12 +1,7 @@
-import { lazy, Suspense } from 'react';
-import { Route, Routes } from 'react-router-dom';
-
-const MainPage = lazy(() => import('@pages/MainPage/ui/MainPage'));
-const NotFoundPage = lazy(() => import('@pages/NotFoundPage/ui/NotFoundPage'));
-
+import { AppRouter } from '@app/providers/router';
 import { useTheme } from '@app/providers/ThemeProvider';
-import { Paths } from '@helpers/config/routes';
 import classNames from '@helpers/lib/classNames';
+
 import '@app/styles/index.scss';
 
 const App = () => {
@@ -14,12 +9,7 @@ const App = () => {
 
   return (
     <div className={classNames('app', {}, [theme])}>
-      <Suspense>
-        <Routes>
-          <Route path={Paths.root} element={<MainPage />}/>
-          <Route path="*" element={<NotFoundPage />} />
-        </Routes>
-      </Suspense>
+      <AppRouter />
     </div>
   );
 };
