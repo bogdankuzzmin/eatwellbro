@@ -1,13 +1,13 @@
 import { lazy, Suspense } from 'react';
 import { Route, Routes } from 'react-router-dom';
 
-const HomePage = lazy(() => import('../Home'));
-const NotFoundPage = lazy(() => import('../NotFound'));
+const HomePage = lazy(() => import('@pages/Home'));
+const NotFoundPage = lazy(() => import('@pages/NotFound'));
 
 import useTheme from '@hooks/useTheme';
 import { Paths } from '@utils/constants/routes';
 import classNames from '@utils/classNames';
-import '@styles/index.scss';
+import '@app/styles/index.scss';
 
 const MainPage = () => {
   const {theme} = useTheme();
