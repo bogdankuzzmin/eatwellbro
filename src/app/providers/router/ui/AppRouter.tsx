@@ -1,8 +1,8 @@
-import { lazy, Suspense } from 'react';
+import { Suspense } from 'react';
 import { Route, Routes } from 'react-router-dom';
 import { routeConfig } from '@shared/config/routeConfig';
 
-const NotFoundPage = lazy(() => import('@pages/NotFoundPage/ui/NotFoundPage'));
+import { NotFoundPage } from '@pages/NotFoundPage';
 
 const AppRouter = () => {
   return (
