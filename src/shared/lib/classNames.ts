@@ -11,8 +11,10 @@
 
 type Mods = Record<string, boolean | string>;
 
-export default (className: string, mods: Mods, additional: string[]): string => ([
+export default (className: string, mods?: Mods, additional?: string[]): string => ([
   className,
-  ...additional,
-  ...Object.entries(mods).filter(([className, value]) => Boolean(value)).map(([className]) => className)
+  ...additional.filter(Boolean),
+  ...Object.entries(mods)
+    .filter(([className, value]) => Boolean(value))
+    .map(([className]) => className)
 ].join(' '));
