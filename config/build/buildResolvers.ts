@@ -3,11 +3,16 @@ import { BuildOptions } from './types/config';
 
 export const buildResolvers = ({paths}: BuildOptions): ResolveOptions => ({
   alias: {
-    '@contexts': `${paths.src}/contexts`,
-    '@hooks': `${paths.src}/hooks`,
+    '@app': `${paths.src}/app`,
+    '@entities': `${paths.src}/entities`,
+    '@features': `${paths.src}/features`,
+    '@helpers': `${paths.src}/helpers`,
     '@pages': `${paths.src}/pages`,
-    '@styles': `${paths.src}/styles`,
-    '@utils': `${paths.src}/utils`,
+    '@shared': `${paths.src}/shared`,
+    '@widgets': `${paths.src}/widgets`,
   },
+  preferAbsolute: true,
+  mainFiles: ['index'],
   extensions: ['.tsx', '.ts', '.js'],
+  modules: [paths.src, 'node_modules'],
 });
