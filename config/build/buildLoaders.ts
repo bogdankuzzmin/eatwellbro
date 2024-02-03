@@ -20,6 +20,11 @@ export const buildLoaders = ({isDev}: BuildOptions): webpack.RuleSetRule[] => {
     ],
   };
 
+  const svgLoader = {
+    test: /\.svg$/,
+    use: ['@svgr/webpack'],
+  };
+
   const typeScriptLoader = {
     test: /\.tsx?$/,
     use: 'ts-loader',
@@ -29,5 +34,6 @@ export const buildLoaders = ({isDev}: BuildOptions): webpack.RuleSetRule[] => {
   return [
     typeScriptLoader,
     cssLoader,
+    svgLoader,
   ];
 };
