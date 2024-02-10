@@ -16,6 +16,7 @@ export interface IButtonProps extends ButtonHTMLAttributes<HTMLButtonElement> {
   className?: string;
   disabled?: boolean;
   fullWidth?: boolean;
+  icon?: boolean;
   size?: typeof ButtonSizeList[number];
   variant?: typeof ButtonVariantList[number];
 }

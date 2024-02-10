@@ -9,6 +9,7 @@ const Button: FC<IButtonProps> = ({
   className,
   disabled,
   fullWidth,
+  icon,
   size = 'normal',
   variant = 'default',
   ...restProps
@@ -24,6 +25,7 @@ const Button: FC<IButtonProps> = ({
           [classes[variant]]: variant,
           [classes[size]]: size,
           [classes['fullWidth']]: fullWidth,
+          [classes['icon']]: icon,
         },
         [className]
       )}

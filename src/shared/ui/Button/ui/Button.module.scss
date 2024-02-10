@@ -32,16 +32,20 @@
   &:focus {
     outline: 0;
 
-    &::before {
-      opacity: 1;
+    &-visible {
+      &::before {
+        opacity: 1;
+      }
     }
   }
+
+
 
   &:disabled {
     color: rgba(255, 255, 255, 0.7);
     cursor: not-allowed;
 
-    &:focus {
+    &:focus-visible {
       &::before {
         opacity: 0;
       }
@@ -54,7 +58,7 @@
   background-color: #f76b15;
 
   &:hover,
-  &:focus {
+  &:focus-visible {
     background-color: #FF801F;
   }
 
@@ -68,7 +72,7 @@
   background-color: green;
 
   &:hover,
-  &:focus {
+  &:focus-visible {
     background-color: #004f00;
   }
 
@@ -82,7 +86,7 @@
   background-color: #e5484d;
 
   &:hover,
-  &:focus {
+  &:focus-visible {
     background-color: #ec5d5e;
   }
 
@@ -96,7 +100,7 @@
   background-color: transparent;
 
   &:hover,
-  &:focus {
+  &:focus-visible {
     color: #fff;
     background-color: #f76b15;
   }
@@ -123,4 +127,9 @@
 
 .fullWidth {
   width: 100%;
+}
+
+.icon {
+  padding: 5px;
+  border-radius: 50%;
 }

@@ -1,5 +1,9 @@
 import { useTheme } from '@app/providers/ThemeProvider';
 import classNames from '@shared/lib/classNames';
+import Button from '@shared/ui/Button';
+import DarkIcon from '@shared/assets/icons/MoonIcon.svg';
+import LightIcon from '@shared/assets/icons/SunIcon.svg';
+
 import classes from './ThemeSwitcher.module.scss';
 
 interface IThemeSwitcherProps {
@@ -7,15 +11,22 @@ interface IThemeSwitcherProps {
 }
 
 const ThemeSwitcher = ({className}: IThemeSwitcherProps) => {
-  const { toggleTheme } = useTheme();
+  const { theme, toggleTheme } = useTheme();
+
+  const isDark = theme === 'dark';
 
   return (
-    <button
+    <Button
       className={classNames(classes.ThemeSwitcher, {}, [className])}
+      aria-label={isDark ? 'Dark theme' : 'Light theme'}
+      title={isDark ? 'Dark theme' : 'Light theme'}
+      variant="text"
+      size="small"
+      icon
       onClick={toggleTheme}
     >
-      Theme
-    </button>
+      {isDark ? <LightIcon /> : <DarkIcon />}
+    </Button>
   );
 };
 
