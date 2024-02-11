@@ -3,7 +3,7 @@ import { BuildOptions } from './types/config';
 
 export const buildDevServer = (options: BuildOptions): DevServerConfiguration => ({
   port: options.port,
-  open: true,
+  open: false,
   historyApiFallback: true,
   hot: true,
 })
