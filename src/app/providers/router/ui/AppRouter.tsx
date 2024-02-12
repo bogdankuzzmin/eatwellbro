@@ -1,8 +1,9 @@
 import { Suspense } from 'react';
 import { Route, Routes } from 'react-router-dom';
-import { routeConfig } from '@shared/config/routeConfig';
 
 import { NotFoundPage } from '@pages/NotFoundPage';
+
+import { routeConfig } from '@shared/config/routeConfig';
 
 const AppRouter = () => {
   return (

@@ -1,8 +1,10 @@
-import { FC, ButtonHTMLAttributes } from 'react';
+import { ButtonHTMLAttributes,FC } from 'react';
 
 import classNames from '@shared/lib/classNames';
-import classes from './Button.module.scss';
+
 import { IButtonProps } from './types';
+
+import classes from './Button.module.scss';
 
 const Button: FC<IButtonProps> = ({
   children,
@@ -27,7 +29,7 @@ const Button: FC<IButtonProps> = ({
           [classes['fullWidth']]: fullWidth,
           [classes['icon']]: icon,
         },
-        [className]
+        [className],
       )}
       disabled={disabled}
       type={type === 'submit' ? 'submit' : 'button'}

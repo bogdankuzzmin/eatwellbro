@@ -15,16 +15,37 @@
   },
   "plugins": [
     "@typescript-eslint",
-    "react"
+    "react",
+    "simple-import-sort"
   ],
   "rules": {
-    "react/jsx-indent": ["error", 2],
-    "react/jsx-indent-props": ["error", 2],
+    "indent": ["error", 2],
+    "no-console": "warn",
     "quotes": ["error", "single"],
     "semi": ["error", "always"],
     "@typescript-eslint/no-unused-vars": "warn",
     "no-unused-vars": "off",
     "react/react-in-jsx-scope": "off",
-    "react/jsx-filename-extension": [2, { "extensions": [".js", ".jsx", "tsx"] }]
+    "react/jsx-filename-extension": [2, { "extensions": [".js", ".jsx", "tsx"] }],
+    "simple-import-sort/imports": [
+      "error",
+      {
+        "groups": [
+          ["^react", "^@?\\w"],
+          ["^@app(/.*|$)"],
+          ["^@entities(/.*|$)"],
+          ["^@features(/.*|$)"],
+          ["^@helpers(/.*|$)"],
+          ["^@pages(/.*|$)"],
+          ["^@shared(/.*|$)"],
+          ["^@widgets(/.*|$)"],
+          ["^\\u0000"],
+          ["^\\.\\.(?!/?$)", "^\\.\\./?$"],
+          ["^\\./(?=.*/)(?!/?$)", "^\\.(?!/?$)", "^\\./?$"],
+          ["^.+\\.s?css$"]
+        ]
+      }
+    ],
+    "simple-import-sort/exports": "error"
   }
 }

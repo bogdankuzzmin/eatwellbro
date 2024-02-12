@@ -1,8 +1,9 @@
 import { useTheme } from '@app/providers/ThemeProvider';
-import classNames from '@shared/lib/classNames';
-import Button from '@shared/ui/Button';
+
 import DarkIcon from '@shared/assets/icons/MoonIcon.svg';
 import LightIcon from '@shared/assets/icons/SunIcon.svg';
+import classNames from '@shared/lib/classNames';
+import Button from '@shared/ui/Button';
 
 import classes from './ThemeSwitcher.module.scss';
 
