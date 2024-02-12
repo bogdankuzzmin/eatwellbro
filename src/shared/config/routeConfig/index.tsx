@@ -5,7 +5,7 @@ import { AboutPage } from '@pages/AboutPage';
 
 export enum AppRoutes {
   Main = 'main',
-  About = 'about'
+  About = 'about',
 }
 
 export const RoutePath: Record<AppRoutes, string> = {

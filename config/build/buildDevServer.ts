@@ -6,4 +6,4 @@ export const buildDevServer = (options: BuildOptions): DevServerConfiguration =>
   open: false,
   historyApiFallback: true,
   hot: true,
-})
+});

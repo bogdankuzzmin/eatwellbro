@@ -22,7 +22,8 @@
     "react/jsx-indent-props": ["error", 2],
     "quotes": ["error", "single"],
     "semi": ["error", "always"],
-    "no-unused-vars": "warn",
+    "@typescript-eslint/no-unused-vars": "warn",
+    "no-unused-vars": "off",
     "react/react-in-jsx-scope": "off",
     "react/jsx-filename-extension": [2, { "extensions": [".js", ".jsx", "tsx"] }]
   }

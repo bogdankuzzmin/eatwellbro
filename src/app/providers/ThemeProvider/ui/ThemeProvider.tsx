@@ -23,7 +23,7 @@ const ThemeProvider = ({children}: ThemeProviderProps) => {
     <ThemeContext.Provider value={defaultProps}>
       {children}
     </ThemeContext.Provider>
-  )
-}
+  );
+};
 
 export default ThemeProvider;

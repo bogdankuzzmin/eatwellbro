@@ -16,7 +16,7 @@ export const buildLoaders = ({isDev}: BuildOptions): webpack.RuleSetRule[] => {
           },
         },
       },
-      "sass-loader",
+      'sass-loader',
     ],
   };
 
