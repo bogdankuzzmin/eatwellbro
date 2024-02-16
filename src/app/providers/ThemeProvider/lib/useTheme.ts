@@ -2,8 +2,9 @@ import { useContext } from 'react';
 
 import { LocalStorage } from '@shared/config/localStorage';
 
-import { ThemeContext } from './ThemeContext';
 import { ETheme } from '../types';
+
+import { ThemeContext } from './ThemeContext';
 
 interface IUseThemeResult {
   theme: ETheme;
@@ -11,7 +12,7 @@ interface IUseThemeResult {
 }
 
 export default (): IUseThemeResult => {
-  const {theme, setTheme} = useContext(ThemeContext);
+  const { setTheme, theme } = useContext(ThemeContext);
 
   const toggleTheme = () => {
     const newTheme = theme === ETheme.DARK ? ETheme.LIGHT : ETheme.DARK;
@@ -23,4 +24,4 @@ export default (): IUseThemeResult => {
     theme,
     toggleTheme,
   };
-}
+};

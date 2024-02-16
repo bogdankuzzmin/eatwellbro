@@ -1,8 +1,9 @@
 import { useTheme } from '@app/providers/ThemeProvider';
-import classNames from '@shared/lib/classNames';
-import Button from '@shared/ui/Button';
+
 import DarkIcon from '@shared/assets/icons/MoonIcon.svg';
 import LightIcon from '@shared/assets/icons/SunIcon.svg';
+import classNames from '@shared/lib/classNames';
+import Button from '@shared/ui/Button';
 
 import classes from './ThemeSwitcher.module.scss';
 
@@ -17,12 +18,12 @@ const ThemeSwitcher = ({className}: IThemeSwitcherProps) => {
 
   return (
     <Button
-      className={classNames(classes.ThemeSwitcher, {}, [className])}
+      icon
       aria-label={isDark ? 'Dark theme' : 'Light theme'}
+      className={classNames(classes.ThemeSwitcher, {}, [className])}
+      size="small"
       title={isDark ? 'Dark theme' : 'Light theme'}
       variant="text"
-      size="small"
-      icon
       onClick={toggleTheme}
     >
       {isDark ? <LightIcon /> : <DarkIcon />}

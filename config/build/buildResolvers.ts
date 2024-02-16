@@ -1,4 +1,5 @@
 import { ResolveOptions } from 'webpack';
+
 import { BuildOptions } from './types/config';
 
 export const buildResolvers = ({paths}: BuildOptions): ResolveOptions => ({
@@ -11,8 +12,8 @@ export const buildResolvers = ({paths}: BuildOptions): ResolveOptions => ({
     '@shared': `${paths.src}/shared`,
     '@widgets': `${paths.src}/widgets`,
   },
-  preferAbsolute: true,
-  mainFiles: ['index'],
   extensions: ['.tsx', '.ts', '.js'],
+  mainFiles: ['index'],
   modules: [paths.src, 'node_modules'],
+  preferAbsolute: true,
 });

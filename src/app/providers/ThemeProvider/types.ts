@@ -1,9 +1,9 @@
 export enum ETheme {
-  LIGHT = 'light',
   DARK = 'dark',
+  LIGHT = 'light'
 }
 
 export interface ThemeContextProps {
-  theme?: ETheme;
   setTheme?: (theme: ETheme) => void;
+  theme?: ETheme;
 }

@@ -1,9 +1,9 @@
 import { RoutePath } from '@shared/config/routeConfig';
-
-import Link from '@shared/ui/Link/Link';
 import classNames from '@shared/lib/classNames';
-import classes from './NavBar.module.scss';
+import Link from '@shared/ui/Link/Link';
 import ThemeSwitcher from '@shared/ui/ThemeSwitcher';
+
+import classes from './NavBar.module.scss';
 
 interface INavBarProps {
   className?: string;
