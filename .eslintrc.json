@@ -30,10 +30,10 @@
     "no-unused-vars": "off",
     "react/react-in-jsx-scope": "off",
     "react/jsx-filename-extension": [2, { "extensions": [".js", ".jsx", "tsx"] }],
-    "sort-destructure-keys/sort-destructure-keys": "warn",
-    "sort-keys-fix/sort-keys-fix": "warn",
-    "typescript-sort-keys/interface": "warn",
-    "typescript-sort-keys/string-enum": "warn",
+    "sort-destructure-keys/sort-destructure-keys": "error",
+    "sort-keys-fix/sort-keys-fix": "error",
+    "typescript-sort-keys/interface": "error",
+    "typescript-sort-keys/string-enum": "error",
     "react/jsx-sort-props": [
       "error",
       {
