@@ -15,8 +15,8 @@ const ThemeProvider = ({children}: ThemeProviderProps) => {
   const [theme, setTheme] = useState<ETheme>(defaultTheme);
 
   const defaultProps = useMemo(() => ({
-    theme,
     setTheme,
+    theme,
   }), [theme]);
 
   return (

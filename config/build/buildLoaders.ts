@@ -36,8 +36,8 @@ export const buildLoaders = ({isDev}: BuildOptions): webpack.RuleSetRule[] => {
   };
 
   const babelLoader = {
-    test: /\.(js|jsx|tsx)$/,
     exclude: /node_modules/,
+    test: /\.(js|jsx|tsx)$/,
     use: {
       loader: 'babel-loader',
       options: {
@@ -47,9 +47,9 @@ export const buildLoaders = ({isDev}: BuildOptions): webpack.RuleSetRule[] => {
   };
 
   const typeScriptLoader = {
+    exclude: /node_modules/,
     test: /\.tsx?$/,
     use: 'ts-loader',
-    exclude: /node_modules/,
   };
 
   return [

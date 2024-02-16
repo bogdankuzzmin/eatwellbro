@@ -12,7 +12,7 @@ interface IUseThemeResult {
 }
 
 export default (): IUseThemeResult => {
-  const {theme, setTheme} = useContext(ThemeContext);
+  const { setTheme, theme } = useContext(ThemeContext);
 
   const toggleTheme = () => {
     const newTheme = theme === ETheme.DARK ? ETheme.LIGHT : ETheme.DARK;

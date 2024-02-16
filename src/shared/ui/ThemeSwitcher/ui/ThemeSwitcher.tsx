@@ -18,12 +18,12 @@ const ThemeSwitcher = ({className}: IThemeSwitcherProps) => {
 
   return (
     <Button
-      className={classNames(classes.ThemeSwitcher, {}, [className])}
+      icon
       aria-label={isDark ? 'Dark theme' : 'Light theme'}
+      className={classNames(classes.ThemeSwitcher, {}, [className])}
+      size="small"
       title={isDark ? 'Dark theme' : 'Light theme'}
       variant="text"
-      size="small"
-      icon
       onClick={toggleTheme}
     >
       {isDark ? <LightIcon /> : <DarkIcon />}
