@@ -10,17 +10,14 @@
   user-select: none;
   cursor: pointer;
   transition:
-          color var(--transition-default),
-          background-color var(--transition-default),
-          border-color var(--transition-default);
+    color var(--transition-default),
+    background-color var(--transition-default),
+    border-color var(--transition-default);
 
   &::before {
     content: '';
     position: absolute;
-    top: -2px;
-    right: -2px;
-    bottom: -2px;
-    left: -2px;
+    inset: -2px;
     z-index: 1;
     border: 1px solid #2727ff;
     transition: opacity 0.2s;
@@ -39,10 +36,8 @@
     }
   }
 
-
-
   &:disabled {
-    color: rgba(255, 255, 255, 0.7);
+    color: rgb(255 255 255 / 70%);
     cursor: not-allowed;
 
     &:focus-visible {

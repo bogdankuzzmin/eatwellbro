@@ -5,8 +5,6 @@ import LightIcon from '@shared/assets/icons/SunIcon.svg';
 import classNames from '@shared/lib/classNames';
 import Button from '@shared/ui/Button';
 
-import classes from './ThemeSwitcher.module.scss';
-
 interface IThemeSwitcherProps {
   className?: string;
 }
@@ -20,7 +18,7 @@ const ThemeSwitcher = ({className}: IThemeSwitcherProps) => {
     <Button
       icon
       aria-label={isDark ? 'Dark theme' : 'Light theme'}
-      className={classNames(classes.ThemeSwitcher, {}, [className])}
+      className={classNames('', {}, [className])}
       size="small"
       title={isDark ? 'Dark theme' : 'Light theme'}
       variant="text"

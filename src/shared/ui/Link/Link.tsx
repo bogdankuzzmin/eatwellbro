@@ -11,7 +11,7 @@ interface ILinkProps extends LinkProps{
 
 const Link: FC<ILinkProps> = ({ children, className, to, ...otherProps }) => (
   <RouterLink
-    className={classNames(classes.Link, {}, [className])}
+    className={classNames(classes.link, {}, [className])}
     to={to}
     {...otherProps}
   >

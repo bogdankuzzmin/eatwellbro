@@ -1,10 +1,10 @@
-@mixin flexCenter {
+@mixin flex-center {
   display: flex;
   justify-content: center;
   align-items: center;
 }
 
-@mixin clearList {
+@mixin clear-list {
   margin: 0;
   padding: 0;
   list-style: none;
