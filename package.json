@@ -10,7 +10,8 @@
     "lint:ts": "eslint \"**/*.{ts,tsx}\"",
     "lint:ts:fix": "eslint \"**/*.{ts,tsx}\" --fix",
     "lint:scss": "npx stylelint \"**/*.scss\"",
-    "lint:scss:fix": "npx stylelint \"**/*.scss\" --fix"
+    "lint:scss:fix": "npx stylelint \"**/*.scss\" --fix",
+    "test": "jest"
   },
   "author": "Bogdan Kuzmin",
   "license": "ISC",
@@ -36,6 +37,7 @@
     "eslint-plugin-typescript-sort-keys": "^3.1.0",
     "file-loader": "^6.2.0",
     "html-webpack-plugin": "^5.6.0",
+    "jest": "^29.7.0",
     "mini-css-extract-plugin": "^2.7.7",
     "sass": "^1.70.0",
     "sass-loader": "^14.0.0",
