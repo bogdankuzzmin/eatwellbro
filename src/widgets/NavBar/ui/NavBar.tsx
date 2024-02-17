@@ -10,16 +10,16 @@ interface INavBarProps {
 }
 
 const NavBar = ({className}: INavBarProps) => (
-  <div className={classNames(classes.Wrapper, {}, [className])}>
-    <nav className={classNames(classes.Navbar, {}, [className])}>
-      <span className={classes.Logo}>LOGO</span>
+  <div className={classNames(classes.wrapper, {}, [className])}>
+    <nav className={classNames(classes.navbar, {}, [className])}>
+      <span className={classes.logo}>LOGO</span>
 
-      <ul className={classes.List}>
-        <li className={classes.ListItem}>
+      <ul className={classes.list}>
+        <li className={classes.listItem}>
           <Link to={RoutePath.main}>Main</Link>
         </li>
 
-        <li className={classes.ListItem}>
+        <li className={classes.listItem}>
           <Link to={RoutePath.about}>About</Link>
         </li>
       </ul>

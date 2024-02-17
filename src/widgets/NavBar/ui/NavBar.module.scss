@@ -1,29 +1,30 @@
 @import "app/styles/mixins";
 
-.Wrapper {
+.wrapper {
   display: flex;
   align-items: center;
   justify-content: space-between;
+
   width: 100%;
   padding: 0 20px;
   background-color: var(--bg-block-color);
   border-bottom: 1px solid var(--primary-color);
 }
 
-.Logo {
-  color: #ca143a;
+.logo {
   font-weight: 500;
+  color: #CA143a;
   letter-spacing: 2px;
 }
 
-.Navbar {
+.navbar {
   display: flex;
   align-items: center;
   height: var(--navbar-height);
 }
 
-.List {
-  @include clearList;
+.list {
+  @include clear-list;
 
   display: flex;
   margin-left: 20px;
