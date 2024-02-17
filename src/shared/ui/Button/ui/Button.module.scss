@@ -1,29 +1,30 @@
 .button {
   position: relative;
   display: inline-flex;
-  justify-content: center;
   align-items: center;
+  justify-content: center;
   color: var(--primary-color);
   text-decoration: none;
+  cursor: pointer;
+  user-select: none;
   border: 0;
   border-radius: 8px;
-  user-select: none;
-  cursor: pointer;
   transition:
     color var(--transition-default),
     background-color var(--transition-default),
     border-color var(--transition-default);
+  
 
   &::before {
-    content: '';
     position: absolute;
     inset: -2px;
     z-index: 1;
-    border: 1px solid #2727ff;
-    transition: opacity 0.2s;
-    opacity: 0;
-    user-select: none;
     pointer-events: none;
+    content: '';
+    user-select: none;
+    border: 1px solid #2727ff;
+    opacity: 0;
+    transition: opacity 0.2s;
   }
 
   &:focus {
