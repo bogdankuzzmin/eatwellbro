@@ -1,8 +1,6 @@
 import { Suspense } from 'react';
 import { Route, Routes } from 'react-router-dom';
 
-import { NotFoundPage } from '@pages/NotFoundPage';
-
 import { routeConfig } from '@shared/config/routeConfig';
 
 const AppRouter = () => {
@@ -16,7 +14,6 @@ const AppRouter = () => {
             path={path}
           />
         ))}
-        <Route element={<NotFoundPage />} path="*" />
       </Routes>
     </Suspense>
   );
