@@ -11,7 +11,7 @@
 
 type Mods = Record<string, boolean | string>;
 
-export default (className: string, mods?: Mods, additional?: string[]): string => ([
+export default (className: string, mods: Mods = {}, additional: string[] = []): string => ([
   className,
   ...additional.filter(Boolean),
   ...Object.entries(mods)
