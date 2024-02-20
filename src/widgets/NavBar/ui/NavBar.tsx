@@ -1,5 +1,5 @@
 import { RoutePath } from '@shared/config/routeConfig';
-import classNames from '@shared/lib/classNames';
+import classNames from '@shared/lib/classNames/classNames';
 import Link from '@shared/ui/Link/Link';
 import ThemeSwitcher from '@shared/ui/ThemeSwitcher';
 

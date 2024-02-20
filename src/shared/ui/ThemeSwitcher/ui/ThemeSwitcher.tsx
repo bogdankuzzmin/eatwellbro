@@ -2,7 +2,7 @@ import { useTheme } from '@app/providers/ThemeProvider';
 
 import DarkIcon from '@shared/assets/icons/MoonIcon.svg';
 import LightIcon from '@shared/assets/icons/SunIcon.svg';
-import classNames from '@shared/lib/classNames';
+import classNames from '@shared/lib/classNames/classNames';
 import Button from '@shared/ui/Button';
 
 interface IThemeSwitcherProps {
