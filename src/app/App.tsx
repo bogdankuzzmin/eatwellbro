@@ -1,7 +1,7 @@
 import { AppRouter } from '@app/providers/router';
 import { useTheme } from '@app/providers/ThemeProvider';
 
-import classNames from '@shared/lib/classNames';
+import classNames from '@shared/lib/classNames/classNames';
 
 import { NavBar } from '@widgets/NavBar';
 

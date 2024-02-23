@@ -4,6 +4,7 @@
  */
 
 import type {Config} from 'jest';
+import path from 'path';
 
 const config: Config = {
   // All imported modules in your tests should be mocked automatically
@@ -90,6 +91,20 @@ const config: Config = {
     'node'
   ],
 
+  moduleNameMapper: {
+    '\\.s?css$': 'identity-obj-proxy',
+    '\\.svg': path.resolve(__dirname, 'jestEmptyComponent.tsx'),
+    '^@app(.*)$': '<rootDir>src/app$1',
+    '^@entities(.*)$': '<rootDir>src/entities$1',
+    '^@features(.*)$': '<rootDir>src/features$1',
+    '^@helpers(.*)$': '<rootDir>src/helpers$1',
+    '^@pages(.*)$': '<rootDir>src/pages$1',
+    '^@shared(.*)$': '<rootDir>src/shared$1',
+    '^@widgets(.*)$': '<rootDir>src/widgets$1',
+  },
+
+  modulePaths: ['<rootDir>src'],
+
   // A map from regular expressions to module names or to arrays of module names that allow to stub out resources with a single module
   // moduleNameMapper: {},
 
@@ -125,6 +140,8 @@ const config: Config = {
 
   // The root directory that Jest should scan for tests and modules within
   rootDir: '../../',
+
+  setupFilesAfterEnv: ['<rootDir>config/jest/setupTests.ts'],
 
   // A list of paths to directories that Jest should use to search for files in
   // roots: [
