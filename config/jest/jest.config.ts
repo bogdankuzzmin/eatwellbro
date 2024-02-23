@@ -4,6 +4,7 @@
  */
 
 import type {Config} from 'jest';
+import path from 'path';
 
 const config: Config = {
   // All imported modules in your tests should be mocked automatically
@@ -92,6 +93,7 @@ const config: Config = {
 
   moduleNameMapper: {
     '\\.s?css$': 'identity-obj-proxy',
+    '\\.svg': path.resolve(__dirname, 'jestEmptyComponent.tsx'),
     '^@app(.*)$': '<rootDir>src/app$1',
     '^@entities(.*)$': '<rootDir>src/entities$1',
     '^@features(.*)$': '<rootDir>src/features$1',
